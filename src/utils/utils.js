@@ -1,5 +1,5 @@
-export function random(min, max) {
-  return Math.round(min - 0.5 + Math.random() * (max - min + 1))
+export function getRandomNumber(number) {
+  return Math.floor(Math.random()*(number+1))
 }
 
 export function getRandomColor() {
