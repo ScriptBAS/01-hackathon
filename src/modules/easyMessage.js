@@ -36,7 +36,6 @@ export class easyMessage extends Module {
 		} catch (error) {
 		  console.log(error)
 		}
-	  
 	  }
  
 
@@ -48,28 +47,9 @@ export class easyMessage extends Module {
 				this.getElement(textMessage);
 				const messageBox = document.querySelector('.message');
 				setTimeout(() => messageBox.remove(), 4000)
-
 			})
 			.catch(error => {
 				console.log(error)
 			})
-
 	}
-
 }
-
-
-
-
-/*
-
-
-import { easyMessage } from './modules/easyMessage';
-
-const box = new easyMessage('easyMessage', 'dsd');
-
-box.trigger();
-добавить в App/js
-*/
-
-
