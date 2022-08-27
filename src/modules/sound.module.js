@@ -1,10 +1,9 @@
 import { Module } from "../core/module";
 
 export class SoundModule extends Module {
-
-	trigger() {
-		const audio = new Audio;
-		audio.src = 'https://zvukogram.com/index.php?r=site/download&id=43825';
-		audio.play();
-	}
+  trigger() {
+    const audio = new Audio();
+    audio.src = './sound/iphone_5s_ding.mp3';
+    audio.play();
+  }
 }
