@@ -1,7 +1,7 @@
 import './styles.css'
 import { ContextMenu } from './menu'
 import { BackgroundModule } from './modules/background.module'
-import { easyMessage } from './modules/easyMessage'
+import { easyMessage } from './modules/message.module'
 import { SoundModule } from './modules/sound.module'
 
 const contextMenu = new ContextMenu('#menu')

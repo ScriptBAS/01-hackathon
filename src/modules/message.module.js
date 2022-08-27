@@ -60,4 +60,5 @@ export class easyMessage extends Module {
 	 			console.log(error)
 	 		})
 	 }
-	 }
+
+	}
