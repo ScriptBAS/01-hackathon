@@ -5,10 +5,10 @@ export class easyMessage extends Module {
 
 	 getElement(text) {
 		const buildDivElementHTML = document.createElement('div');
-		const buidTitleElementHTML = document.createElement('p');
-		buidTitleElementHTML.textContent = 'Message:';
-		buidTitleElementHTML.style.fontWeight = 'Bold';
-		buidTitleElementHTML.style.padding = '5px 0';
+		const buildTitleElementHTML = document.createElement('p');
+		buildTitleElementHTML.textContent = 'Message:';
+		buildTitleElementHTML.style.fontWeight = 'Bold';
+		buildTitleElementHTML.style.padding = '5px 0';
 		buildDivElementHTML.className = ('message');
 		buildDivElementHTML.textContent = text;
 		buildDivElementHTML.style.position = 'absolute';
@@ -19,7 +19,7 @@ export class easyMessage extends Module {
 		buildDivElementHTML.style.borderRadius = '8px';
 		buildDivElementHTML.style.boxSizing = 'border-box';
 		buildDivElementHTML.style.padding = '20px';
-		buildDivElementHTML.prepend(buidTitleElementHTML);
+		buildDivElementHTML.prepend(buildTitleElementHTML);
 		return document.body.append(buildDivElementHTML);
 	}
 
