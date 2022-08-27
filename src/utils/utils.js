@@ -1,3 +1,4 @@
+
 export function getRandomNumber(number) {
   return Math.floor(Math.random()*(number+1))
 }
@@ -8,3 +9,4 @@ export function getRandomColor() {
   const blue = getRandomNumber(255)
   return `rgb(${red}, ${green}, ${blue})`
 }
+
