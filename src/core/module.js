@@ -18,3 +18,5 @@ export class Module {
     return `<li class="menu-item" data-type="${this.type}">${this.text}</li>`
   }
 }
+
+

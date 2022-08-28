@@ -1,0 +1,128 @@
+html {
+  font-family: 'Press Start 2P';
+  font-size: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.close,
+#button {
+  --color: firebrick;
+  --border-color: firebrick;
+  --shadow-color: rgb(112, 20, 20);
+
+  position: relative;
+  font-size: .75rem;
+  width: 200px;
+  height: 75px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 2rem;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: bold;
+  background-color: var(--color);
+  box-shadow: 0 -3px var(--color),
+              3px 0 var(--color),
+              0 3px var(--color),
+              -3px 0 var(--color),
+              0 -6px var(--border-color),
+              3px -3px var(--border-color),
+              6px 0 var(--border-color),
+              0 6px var(--border-color),
+              -3px 3px var(--border-color),
+              -6px 0 var(--border-color),
+              -3px -3px var(--border-color),
+              3px 3px var(--border-color),
+              0px 9px var(--shadow-color),
+              3px 6px var(--shadow-color),
+              6px 3px var(--shadow-color),
+              0px 9px var(--shadow-color),
+              -3px 6px var(--shadow-color),
+              -6px 3px var(--shadow-color);
+}
+
+#button:active {
+  top: 6px;
+box-shadow: 0 -3px var(--color),
+              3px 0 var(--color),
+              0 3px var(--color),
+              -3px 0 var(--color),
+              0 -6px var(--border-color),
+              3px -3px var(--border-color),
+              6px 0 var(--border-color),
+              0 6px var(--border-color),
+              -3px 3px var(--border-color),
+              -6px 0 var(--border-color),
+              -3px -3px var(--border-color),
+              3px 3px var(--border-color),
+              0px 6px var(--shadow-color),
+              3px 3px var(--shadow-color),
+              6px 0px var(--shadow-color),
+              0px 6px var(--shadow-color),
+              -3px 3px var(--shadow-color),
+              -6px 0px var(--shadow-color);
+}
+
+#display,
+#counter {
+  height: 32px;
+  padding: 20px;
+  user-select: none;
+  color: black;
+}
+
+.unity {
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+.close {
+top: 6%;
+width: 50px;
+height: 50px;
+opacity: 1;
+transition-duration: 0.5s;
+margin-left: auto;
+margin-right: auto;
+}
+.close:hover {
+opacity: 1;
+}
+.close:before, .close:after {
+position: absolute;
+display: flex;
+left: 22px;
+top: 5px;
+content: ' ';
+height: 40px;
+width: 2px;
+background-color: black;
+}
+.close:before {
+transform: rotate(45deg);
+}
+.close:after {
+transform: rotate(-45deg);
+}
