@@ -11,6 +11,11 @@ export class Module42 extends Module {
       isPicExist.remove();
     }
 
+    const isButtonExist = document.querySelector(".button");
+    if (isButtonExist) {
+      isButtonExist.remove();
+    }
+
     addButton();
     const buttonHTML = document.querySelector(".button");
     buttonHTML.addEventListener("click", () => {
