@@ -12,3 +12,12 @@ export function getRandomColor() {
 export function getSumPoints(array) {
   return array.reduce((total, current) => total += current.point,0)
 }
+
+export function removeElement(el, timeout) {
+  const clear = function () {
+    setTimeout(() => {
+      el.remove()
+    }, timeout);
+  }
+  clear()
+}
