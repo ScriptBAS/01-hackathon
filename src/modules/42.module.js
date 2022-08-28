@@ -1,4 +1,5 @@
 import { Module } from "../core/module";
+import { removeElement } from "../utils/utils";
 import { addButton, addPic } from "../components/scripts/42.module";
 
 export class Module42 extends Module {
@@ -15,6 +16,9 @@ export class Module42 extends Module {
     buttonHTML.addEventListener("click", () => {
       addPic("./src/assets/img/42.png");
       buttonHTML.remove();
+
+      const picHTML = document.querySelector(".pic");
+      removeElement(picHTML, 2000);
     });
   }
 }
