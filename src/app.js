@@ -3,7 +3,7 @@ import { ContextMenu } from './menu'
 import { BackgroundModule } from './modules/background.module'
 import { easyMessage } from './modules/message.module'
 import { SoundModule } from './modules/sound.module'
-
+import { TwentyOne } from './modules/twentyone.module'
 const contextMenu = new ContextMenu('#menu')
 
 document.body.addEventListener('contextmenu', (event)=> {
@@ -19,3 +19,6 @@ contextMenu.add(messageModule)
 
 const soundModule = new SoundModule('SoundModule', 'Воспроизвести звук')
 contextMenu.add(soundModule)
+
+const boxgame = new TwentyOne('TwentyOne', '21');
+contextMenu.add(boxgame)

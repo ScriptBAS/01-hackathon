@@ -8,3 +8,7 @@ export function getRandomColor() {
   const blue = getRandomNumber(255)
   return `rgb(${red}, ${green}, ${blue})`
 }
+
+export function getSumPoints(array) {
+  return array.reduce((total, current) => total += current.point,0)
+}
