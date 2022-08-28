@@ -306,14 +306,12 @@ export class TwentyOne extends Module {
             let cardItem = this.getCard(PlayerCardBox[PlayerCardBox.length - 1]);
             PlayerField.append(cardItem);
             let sumPointsPlayer = getSumPoints(PlayerCardBox);
-            console.log(sumPointsPlayer)
             random = getRandomNumber(cardBox.length - 1);
             EnemyCardBox.push(cardBox[random]);
             cardBox.splice(random, 1);
             cardItem = this.getCard(EnemyCardBox[EnemyCardBox.length - 1]);
             EnemyField.append(cardItem);
             let sumPointsEnemy = getSumPoints(EnemyCardBox);
-            console.log(sumPointsEnemy)
             if (sumPointsPlayer > 21) {
                 isWinner = false;
                 document.body.append(this.getModalBox('Проигл, Ва бене!', isWinner))
@@ -342,7 +340,6 @@ export class TwentyOne extends Module {
                 deleteCards.forEach(item => item.remove());
             }
 
-            console.log(cardBox)
             const closeButton = document.querySelector('.Close-Modal');
             if (closeButton) {
                 closeButton.addEventListener('click', () => {
@@ -350,7 +347,6 @@ export class TwentyOne extends Module {
                     modalWindow.remove();
                     const deleteCards = document.querySelectorAll('.Card-Style')
                     deleteCards.forEach((item) => item.remove());
-                    console.log(PlayerCardBox);
                     PlayerCardBox = [];
                     EnemyCardBox = [];
                 }, )
