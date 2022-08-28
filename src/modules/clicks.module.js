@@ -1,18 +1,16 @@
 import {Module} from '../core/module'
-import './assets/click-module.css'
+// import '../assets/click-module.css'
+
 
 export class ClicksModule extends Module {
-  #domHTML
-  #clickFunc
 
-  trigger() {
-    this.#domHTML()
-    this.#clickFunc()
-  }
+  #render () {
+    const body = document.querySelector('body')
 
-  #domHTML() {
-    const html = document.html
     const main = document.createElement('main')
+
+    const divClickers = document.createElement('div')
+    divClickers.id = 'divclickers'
 
     const divDisplay = document.createElement('div')
     divDisplay.id = 'display'
@@ -22,26 +20,34 @@ export class ClicksModule extends Module {
 
     const button = document.createElement('button')
     button.id = 'button'
-    
+    button.textContent = 'Клик!'
+
     const cancelCross = document.createElement('a')
     cancelCross.className = 'close'
-    cancelCross.id = '#'
-    
+
     const counter = document.createElement('div')
     counter.id = 'counter'
 
-    document.body.append(main)
-    main.append(divDisplay, divUnity, button, counter)
-    divDisplay.append(button, cancelCross)
-
-    return main
+    body.append(divClickers)
+    divClickers.append(main)
+    main.append(divDisplay, divUnity, counter)
+    divUnity.append(button, cancelCross)
+    
+    return divClickers
+    
   }
 
-  #clickFunc() {
-    let click = 0
+  trigger() {
+    const clikerDiv = document.querySelector('#divclickers')
+    if (clikerDiv) {
+      clikerDiv.remove()
+    }
+    this.#render()
+    let click = 1
 
     const TIMEOUT = 10000
 
+    const getMain = document.querySelector('main')
     const display = document.querySelector('#display')
     display.textContent = 'Нажмите, чтобы начать играть'
     const button = document.querySelector('button')
@@ -52,6 +58,7 @@ export class ClicksModule extends Module {
     cancelCross.onclick = end
 
     function end() {
+      getMain.remove()
       display.remove()
       button.remove()
       counter.remove()
@@ -82,5 +89,6 @@ export class ClicksModule extends Module {
     function formatTime(ms) {
       return Number(ms / 1000).toFixed(2)
     }
+
   }
 }

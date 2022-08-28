@@ -1,9 +1,12 @@
 import './styles.css'
+import './assets/click-module.css'
+
 import { ContextMenu } from './menu'
 import { BackgroundModule } from './modules/background.module'
 import { easyMessage } from './modules/message.module'
 import { SoundModule } from './modules/sound.module'
 import { ShapeModule } from './modules/shape.module'
+import { ClicksModule } from './modules/clicks.module'
 
 const contextMenu = new ContextMenu('#menu')
 
@@ -23,3 +26,6 @@ contextMenu.add(soundModule)
 
 const shapeModule = new ShapeModule('ShapeModule', 'Случайная фигура')
 contextMenu.add(shapeModule)
+
+const clickModule = new ClicksModule('ClicksModule', 'Считать клики за 10 секунд')
+contextMenu.add(clickModule)
