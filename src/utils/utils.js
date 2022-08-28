@@ -9,6 +9,10 @@ export function getRandomColor() {
   return `rgb(${red}, ${green}, ${blue})`
 }
 
+export function getSumPoints(array) {
+  return array.reduce((total, current) => total += current.point,0)
+}
+
 export function removeElement(el, timeout) {
   const clear = function () {
     setTimeout(() => {
