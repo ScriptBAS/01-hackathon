@@ -355,7 +355,6 @@ export class TwentyOne extends Module {
 
 	 }
 
-     
      getCard(card) {
     
         const cardElementHTML = document.createElement('div');
