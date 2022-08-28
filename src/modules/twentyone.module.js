@@ -56,7 +56,7 @@ export class TwentyOne extends Module {
         let EnemyCardBox = [];
         const fieldPlayerValue = document.querySelector('#Player');
         const fieldEnemyValue = document.querySelector('#Enemy');
-        const checkedID = document.querySelector('.Button-Style');
+        const checkedID = document.querySelector('#button21');
         if (!fieldPlayerValue && !fieldEnemyValue) {
             this.getGameField();
         }
@@ -388,7 +388,7 @@ export class TwentyOne extends Module {
         buttonElementHTML.style.borderRadius = '10px';
         buttonElementHTML.style.left = '0';
         buttonElementHTML.style.top = '40%';
-        buttonElementHTML.id = 'button';
+        buttonElementHTML.id = 'button21';
         buttonElementHTML.className = 'Button-Style';
         document.body.append(buttonElementHTML);
 
