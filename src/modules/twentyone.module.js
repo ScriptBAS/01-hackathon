@@ -27,7 +27,7 @@ export class TwentyOne extends Module {
         fieldPlayer.style.backgroundColor = 'skyblue';
         fieldPlayer.style.position = 'absolute';
         fieldPlayer.style.right = '50%';
-        fieldPlayer.style.bottom = '0';
+        fieldPlayer.style.top = '0';
         fieldPlayer.style.borderRadius = '10px';
 
 
@@ -41,12 +41,12 @@ export class TwentyOne extends Module {
         fieldEnemy.style.display = 'flex';
         fieldEnemy.style.position = 'absolute';
         fieldEnemy.style.right = '50%';
-        fieldEnemy.style.top = '0';
+        fieldEnemy.style.bottom = '0';
         this.mainConteiner.style.position = 'relative';
         this.mainConteiner.style.left = '25%';
         this.mainConteiner.style.top = '0'
         this.mainConteiner.style.width = '1400px';
-        this.mainConteiner.append(fieldPlayer, fieldEnemy);
+        this.mainConteiner.append(fieldEnemy, fieldPlayer);
         fieldEnemy.style.borderRadius = '10px';
     }
 
@@ -56,7 +56,7 @@ export class TwentyOne extends Module {
         let EnemyCardBox = [];
         const fieldPlayerValue = document.querySelector('#Player');
         const fieldEnemyValue = document.querySelector('#Enemy');
-        const checkedID = document.querySelector('#button');
+        const checkedID = document.querySelector('.Button-Style');
         if (!fieldPlayerValue && !fieldEnemyValue) {
             this.getGameField();
         }
