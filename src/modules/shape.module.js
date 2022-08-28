@@ -5,8 +5,6 @@ export class ShapeModule extends Module {
   trigger() {
     const canvas = document.createElement('canvas')
     canvas.style.position = 'absolute'
-    // canvas.width = window.innerWidth
-    // canvas.height = window.innerHeight
     document.body.append(canvas)
     const ctx = canvas.getContext('2d');
     ctx.beginPath();
@@ -55,7 +53,7 @@ export class ShapeModule extends Module {
       ctx.fill();
     }
     
-    removeElement(canvas)
+    removeElement(canvas, 5000)
   }
 
   randomCoord(currentPoint, prevPoint, max) {
