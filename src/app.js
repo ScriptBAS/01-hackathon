@@ -1,5 +1,5 @@
 import './styles.css'
-
+import './components/style/42.css'
 import { ContextMenu } from './menu'
 import { BackgroundModule } from './modules/background.module'
 import { easyMessage } from './modules/message.module'
@@ -26,5 +26,5 @@ contextMenu.add(soundModule)
 const shapeModule = new ShapeModule('ShapeModule', 'Случайная фигура')
 contextMenu.add(shapeModule)
 
-const module42 = new Module42('Module42', 'Ответ на главный вопрос жизни')
+const module42 = new Module42('42Module', 'В чём смысл жизни')
 contextMenu.add(module42)

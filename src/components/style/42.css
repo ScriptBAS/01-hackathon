@@ -1,3 +1,14 @@
+body {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.activated {
+  background-color: #414a4c;
+  transition: background-color 0.7s linear;
+}
+
 .button {
   display: block;
   padding: 8px 16px;
@@ -29,4 +40,11 @@
   color: #ffffff;
   background-color: #00677e;
   cursor: pointer;
+}
+
+.pic {
+  width: 500px;
+  height: 479px;
+
+  border-radius: 5%;
 }
