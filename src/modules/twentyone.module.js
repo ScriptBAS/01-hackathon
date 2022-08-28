@@ -4,9 +4,9 @@ import { getSumPoints } from "../utils/utils.js";
 
 export class TwentyOne extends Module {
     constructor(type, text) {
-        super(type,text)
+        super(type, text)
         this.mainConteiner = document.createElement('div');
-      
+
         document.body.append(this.mainConteiner);
     }
      
@@ -38,6 +38,11 @@ export class TwentyOne extends Module {
         fieldEnemy.style.position= 'absolute';
         fieldEnemy.style.right='50%';
         fieldEnemy.style.top='0';
+        this.mainConteiner.style.position='relative';
+        this.mainConteiner.style.left='50%';
+        this.mainConteiner.style.top = '50%'
+        this.mainConteiner.style.width = '1400px';
+        
         this.mainConteiner.append(fieldPlayer,fieldEnemy);
         fieldEnemy.style.borderRadius='10px';
      }
@@ -399,9 +404,9 @@ export class TwentyOne extends Module {
     modalBox.className = 'Modal-Box';
     modalBox.id = 'modalBox';
     modalBox.style.backgroundColor='lightcoral';
-    modalBox.style.position= 'relative';
-    modalBox.style.top = '20%';
-    modalBox.style.left = '50%';
+    modalBox.style.position= 'absolute';
+    modalBox.style.top = '0';
+    modalBox.style.right = '0';
     modalBox.style.height = '600px';
     modalBox.style.borderRadius = '20px';
     const titleResult = document.createElement('p');
