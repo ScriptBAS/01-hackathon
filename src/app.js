@@ -3,6 +3,7 @@ import { ContextMenu } from './menu'
 import { BackgroundModule } from './modules/background.module'
 import { easyMessage } from './modules/message.module'
 import { SoundModule } from './modules/sound.module'
+import { ShapeModule } from './modules/shape.module'
 
 const contextMenu = new ContextMenu('#menu')
 
@@ -19,3 +20,6 @@ contextMenu.add(messageModule)
 
 const soundModule = new SoundModule('SoundModule', 'Воспроизвести звук')
 contextMenu.add(soundModule)
+
+const shapeModule = new ShapeModule('ShapeModule', 'Случайная фигура')
+contextMenu.add(shapeModule)
