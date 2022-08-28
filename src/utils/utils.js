@@ -9,11 +9,11 @@ export function getRandomColor() {
   return `rgb(${red}, ${green}, ${blue})`
 }
 
-export function removeElement(el) {
+export function removeElement(el, timeout) {
   const clear = function () {
     setTimeout(() => {
       el.remove()
-    }, 5000);
+    }, timeout);
   }
   clear()
 }
