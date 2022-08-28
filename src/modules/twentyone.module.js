@@ -43,10 +43,9 @@ export class TwentyOne extends Module {
         fieldEnemy.style.right = '50%';
         fieldEnemy.style.top = '0';
         this.mainConteiner.style.position = 'relative';
-        this.mainConteiner.style.left = '50%';
-        this.mainConteiner.style.top = '50%'
+        this.mainConteiner.style.left = '25%';
+        this.mainConteiner.style.top = '0'
         this.mainConteiner.style.width = '1400px';
-
         this.mainConteiner.append(fieldPlayer, fieldEnemy);
         fieldEnemy.style.borderRadius = '10px';
     }
